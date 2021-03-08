@@ -8,11 +8,12 @@
 
 import React from 'react';
 import {Text, View} from 'react-native';
+import Home from './src/screens/home';
 
 const App = () => {
   return (
     <View>
-      <Text>Hello</Text>
+      <Home />
     </View>
   );
 };
