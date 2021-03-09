@@ -7,14 +7,14 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
-import Home from './src/screens/home';
+import {NavigationContainer} from '@react-navigation/native';
+import MainNavigator from './src/navigation';
 
 const App = () => {
   return (
-    <View>
-      <Home />
-    </View>
+    <NavigationContainer>
+      <MainNavigator />
+    </NavigationContainer>
   );
 };
 

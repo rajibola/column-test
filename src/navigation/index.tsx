@@ -22,19 +22,19 @@ const options: StackNavigationOptions = {
 };
 
 const SharedConfig: SharedElementsComponentConfig = (route) => {
-  const data = route.params;
+  const {item} = route.params;
   return [
     {
-      id: `item.${data.event.id}.icon`,
-      resize: 'stretch',
-      align: 'center-top',
+      id: `item.${item.recordID}.icon`,
+      // resize: 'stretch',
+      // align: 'center-top',
       animation: 'fade',
     },
     {
-      id: `item.${data.event.id}.title`,
-      resize: 'stretch',
-      align: 'left-top',
-      animation: 'fade',
+      id: `item.${item.recordID}.title`,
+      resize: 'clip',
+      // align: 'left-center',
+      animation: 'move',
     },
   ];
 };
@@ -43,7 +43,9 @@ const RootStack = createSharedElementStackNavigator<NavigationParamList>();
 
 export default function MainNavigator() {
   return (
-    <RootStack.Navigator initialRouteName="Home" screenOptions={options}>
+    <RootStack.Navigator
+      initialRouteName="ContactLists"
+      screenOptions={options}>
       <RootStack.Screen name="Home" component={Home} />
       <RootStack.Screen name="ContactLists" component={ContactLists} />
       <RootStack.Screen
