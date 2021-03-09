@@ -7,7 +7,6 @@ import {ContactStyles as styles} from './styles';
 
 const Contact = ({navigation, route}: ContactProps) => {
   const {item} = route.params;
-  // console.log(item);
   return (
     <View style={styles.container}>
       <Text onPress={() => navigation.goBack()} style={styles.goback}>
@@ -28,6 +27,7 @@ const Contact = ({navigation, route}: ContactProps) => {
           {item.givenName} {item.familyName}
         </Text>
       </SharedElement>
+      <Text></Text>
     </View>
   );
 };
