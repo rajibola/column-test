@@ -1,3 +1,7 @@
 export const getInitails = (name: string) => {
-  return name[0] + name[1];
+  if (name.length >= 2) {
+    return (name[0] + name[1]).trim();
+  }
+
+  return 'letters not greater than two';
 };

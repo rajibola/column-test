@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Button component renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "backgroundColor": "#ecf0f1",
+      "borderRadius": 103.5,
+      "bottom": 47.5,
+      "height": 104,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 65,
+      "position": "absolute",
+      "width": 619.5,
+      "zIndex": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#34495e",
+          "fontFamily": "rubik-regular",
+          "fontSize": 22,
+          "lineHeight": 29,
+        },
+        Object {
+          "color": "#34495e",
+          "fontSize": 29,
+          "lineHeight": 38.5,
+          "textTransform": "uppercase",
+        },
+      ]
+    }
+  >
+    Login
+  </Text>
+</View>
+`;
