@@ -1,6 +1,28 @@
 import {StyleSheet} from 'react-native';
 import colors from '../constants/colors';
-import {getStatusBarHeight, hp, wp} from '../shared/layout';
+import {getStatusBarHeight, hp, paddingTopiOS, wp} from '../shared/layout';
+
+export const HomeStyles = StyleSheet.create({
+  subtitle: {
+    color: colors.light,
+    fontSize: hp(16),
+    lineHeight: hp(18),
+    marginTop: hp(40),
+    paddingRight: wp(70),
+  },
+  title: {
+    color: colors.light,
+    fontSize: hp(50),
+    lineHeight: hp(60),
+    marginTop: hp(40),
+  },
+  container: {
+    flex: 1,
+    backgroundColor: colors.dark,
+    paddingTop: getStatusBarHeight(),
+    paddingHorizontal: wp(30),
+  },
+});
 
 export const ContactStyles = StyleSheet.create({
   goback: {

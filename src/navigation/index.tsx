@@ -43,9 +43,7 @@ const RootStack = createSharedElementStackNavigator<NavigationParamList>();
 
 export default function MainNavigator() {
   return (
-    <RootStack.Navigator
-      initialRouteName="ContactLists"
-      screenOptions={options}>
+    <RootStack.Navigator initialRouteName="Home" screenOptions={options}>
       <RootStack.Screen name="Home" component={Home} />
       <RootStack.Screen name="ContactLists" component={ContactLists} />
       <RootStack.Screen

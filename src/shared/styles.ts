@@ -44,7 +44,7 @@ export const ListStyles = StyleSheet.create({
 });
 export const ButtonStyles = StyleSheet.create({
   buttonText: {
-    color: colors.white,
+    color: colors.dark,
     fontSize: hp(16),
     lineHeight: hp(21),
     textTransform: 'uppercase',
@@ -52,7 +52,8 @@ export const ButtonStyles = StyleSheet.create({
   container: {
     height: hp(57),
     paddingHorizontal: wp(36),
-    backgroundColor: colors.dark,
+    backgroundColor: colors.light,
+    borderWidth: hp(1),
     position: 'absolute',
     zIndex: 10,
     bottom: hp(26),
