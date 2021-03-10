@@ -8,7 +8,7 @@ describe('Testing react navigation', () => {
   test('page contains the title and subtitle', async () => {
     const component = <App />;
 
-    const {findByText, findAllByText} = render(component);
+    const {findByText} = render(component);
 
     const title = await findByText('Hello Column/');
     const subtitle = await findByText(

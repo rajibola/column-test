@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Button component renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "marginBottom": 27.5,
+      "opacity": 1,
+      "paddingLeft": 36,
+    }
+  }
+>
+  <Image
+    height={81.5}
+    source={
+      Object {
+        "uri": "content://com.android.contacts/display_photo/3",
+      }
+    }
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#34495e",
+        "borderRadius": 81.5,
+        "height": 81.5,
+        "justifyContent": "center",
+        "marginRight": 18,
+        "width": 81.5,
+      }
+    }
+    width={81.5}
+  />
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#95a5a6",
+        "borderBottomWidth": 2,
+        "flex": 1,
+        "paddingVertical": 14.5,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "rubik-medium",
+              "fontSize": 22,
+              "lineHeight": 33,
+            },
+            Object {
+              "alignSelf": "baseline",
+              "color": "#34495e",
+              "fontSize": 25.5,
+              "lineHeight": 38.5,
+            },
+          ]
+        }
+      >
+        Carl Jung
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#34495e",
+            "fontFamily": "rubik-regular",
+            "fontSize": 22,
+            "lineHeight": 33,
+          },
+          Object {
+            "color": "#34495e",
+            "fontSize": 25.5,
+            "lineHeight": 38.5,
+            "marginTop": 7.5,
+            "opacity": 0.6,
+          },
+        ]
+      }
+    >
+      (555) 555-5555
+    </Text>
+  </View>
+</View>
+`;
