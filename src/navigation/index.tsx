@@ -26,7 +26,7 @@ const SharedConfig: SharedElementsComponentConfig = (route) => {
   return [
     {
       id: `item.${item.recordID}.icon`,
-      animation: 'fade',
+      animation: 'move',
     },
     {
       id: `item.${item.recordID}.title`,

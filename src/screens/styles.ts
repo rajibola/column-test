@@ -1,12 +1,6 @@
-import {Platform, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import colors from '../constants/colors';
-import {
-  getStatusBarHeight,
-  hp,
-  isIphoneX,
-  paddingTopiOS,
-  wp,
-} from '../shared/layout';
+import {getStatusBarHeight, hp, isIphoneX, wp} from '../shared/layout';
 
 export const HomeStyles = StyleSheet.create({
   subtitle: {
@@ -25,7 +19,7 @@ export const HomeStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.dark,
-    paddingTop: getStatusBarHeight(),
+    paddingTop: isIphoneX() ? getStatusBarHeight() : 0 + wp(15),
     paddingHorizontal: wp(30),
   },
 });
@@ -34,23 +28,27 @@ export const ContactStyles = StyleSheet.create({
   goback: {
     fontSize: hp(14),
     lineHeight: hp(20),
+    alignSelf: 'flex-start',
+    marginLeft: wp(20),
   },
   name: {
     fontSize: hp(24),
-    fontWeight: 'bold',
+    lineHeight: hp(30),
     color: colors.dark,
     marginTop: hp(20),
     alignSelf: 'baseline',
   },
   container: {
     flex: 1,
-    paddingTop: getStatusBarHeight(),
-    paddingLeft: wp(20),
+    paddingTop: isIphoneX() ? getStatusBarHeight() : 0 + wp(15),
+    alignItems: 'center',
+    backgroundColor: colors.light,
   },
   initials: {
     color: colors.white,
     textTransform: 'uppercase',
     fontSize: hp(30),
+    lineHeight: hp(35),
   },
   noAvatar: {
     width: wp(80),
@@ -59,7 +57,7 @@ export const ContactStyles = StyleSheet.create({
     borderRadius: wp(80),
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'flex-start',
+    // alignSelf: 'flex-start',
     marginTop: hp(45),
   },
 });
@@ -84,7 +82,6 @@ export const ContactListStyles = StyleSheet.create({
   },
   name: {
     fontSize: hp(14),
-    fontWeight: 'bold',
     color: colors.dark,
     alignSelf: 'baseline',
   },

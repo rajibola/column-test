@@ -30,7 +30,7 @@ export type ItemProps = {
   givenName: string;
   hasThumbnail: boolean;
   thumbnailPath: string;
-  phoneNumbers: {number: string}[];
+  phoneNumbers: {number: string; label: string}[];
 };
 
 export type NavigationParamList = {

@@ -1,16 +1,17 @@
 import {StyleSheet} from 'react-native';
 import colors from '../constants/colors';
-import {wp, hp, paddingTopiOS} from './layout';
+import {wp, hp} from './layout';
 
 export const ListStyles = StyleSheet.create({
   number: {
-    marginTop: hp(2),
+    marginTop: hp(4),
     fontSize: hp(14),
+    lineHeight: hp(18),
     opacity: 0.6,
   },
   name: {
     fontSize: hp(14),
-    fontWeight: 'bold',
+    lineHeight: hp(18),
     color: colors.dark,
     alignSelf: 'baseline',
   },
@@ -31,6 +32,8 @@ export const ListStyles = StyleSheet.create({
   initials: {
     color: colors.white,
     textTransform: 'uppercase',
+    fontSize: hp(16),
+    lineHeight: hp(20),
   },
   noAvatar: {
     width: wp(45),
@@ -53,7 +56,6 @@ export const ButtonStyles = StyleSheet.create({
     height: hp(57),
     paddingHorizontal: wp(36),
     backgroundColor: colors.light,
-    borderWidth: hp(1),
     position: 'absolute',
     zIndex: 10,
     bottom: hp(26),
