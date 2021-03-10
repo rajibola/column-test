@@ -1,19 +1,18 @@
 import {StyleSheet} from 'react-native';
 import colors from '../constants/colors';
+import {fonts} from '../constants/fonts';
 import {getStatusBarHeight, hp, isIphoneX, wp} from '../shared/layout';
 
 export const HomeStyles = StyleSheet.create({
   subtitle: {
+    ...fonts[16],
     color: colors.light,
-    fontSize: hp(16),
-    lineHeight: hp(18),
     marginTop: hp(40),
     paddingRight: wp(70),
   },
   title: {
+    ...fonts[50],
     color: colors.light,
-    fontSize: hp(50),
-    lineHeight: hp(60),
     marginTop: hp(40),
   },
   container: {
@@ -26,15 +25,12 @@ export const HomeStyles = StyleSheet.create({
 
 export const ContactStyles = StyleSheet.create({
   goback: {
-    fontSize: hp(14),
-    lineHeight: hp(20),
+    ...fonts[14],
     alignSelf: 'flex-start',
     marginLeft: wp(20),
   },
   name: {
-    fontSize: hp(24),
-    lineHeight: hp(30),
-    color: colors.dark,
+    ...fonts[24],
     marginTop: hp(20),
     alignSelf: 'baseline',
   },
@@ -45,10 +41,9 @@ export const ContactStyles = StyleSheet.create({
     backgroundColor: colors.light,
   },
   initials: {
+    ...fonts[30],
     color: colors.white,
     textTransform: 'uppercase',
-    fontSize: hp(30),
-    lineHeight: hp(35),
   },
   noAvatar: {
     width: wp(80),
@@ -57,7 +52,6 @@ export const ContactStyles = StyleSheet.create({
     borderRadius: wp(80),
     justifyContent: 'center',
     alignItems: 'center',
-    // alignSelf: 'flex-start',
     marginTop: hp(45),
   },
 });
@@ -67,7 +61,7 @@ export const ContactListStyles = StyleSheet.create({
     paddingTop: hp(10),
   },
   title: {
-    fontSize: hp(20),
+    ...fonts[20],
     backgroundColor: colors.dark,
     paddingTop: isIphoneX() ? getStatusBarHeight() : 0 + wp(15),
     width: '100%',
@@ -77,12 +71,11 @@ export const ContactListStyles = StyleSheet.create({
   },
   number: {
     marginTop: hp(2),
-    fontSize: hp(14),
+    ...fonts[14],
     opacity: 0.6,
   },
   name: {
-    fontSize: hp(14),
-    color: colors.dark,
+    ...fonts[14],
     alignSelf: 'baseline',
   },
   container: {

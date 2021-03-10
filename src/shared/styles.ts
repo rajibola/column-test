@@ -1,18 +1,16 @@
 import {StyleSheet} from 'react-native';
 import colors from '../constants/colors';
+import {fonts} from '../constants/fonts';
 import {wp, hp} from './layout';
 
 export const ListStyles = StyleSheet.create({
   number: {
     marginTop: hp(4),
-    fontSize: hp(14),
-    lineHeight: hp(18),
+    ...fonts[14],
     opacity: 0.6,
   },
   name: {
-    fontSize: hp(14),
-    lineHeight: hp(18),
-    color: colors.dark,
+    ...fonts[14],
     alignSelf: 'baseline',
   },
   textContainer: {
@@ -30,10 +28,9 @@ export const ListStyles = StyleSheet.create({
   },
 
   initials: {
+    ...fonts[16],
     color: colors.white,
     textTransform: 'uppercase',
-    fontSize: hp(16),
-    lineHeight: hp(20),
   },
   noAvatar: {
     width: wp(45),
@@ -47,9 +44,7 @@ export const ListStyles = StyleSheet.create({
 });
 export const ButtonStyles = StyleSheet.create({
   buttonText: {
-    color: colors.dark,
-    fontSize: hp(16),
-    lineHeight: hp(21),
+    ...fonts[16],
     textTransform: 'uppercase',
   },
   container: {
@@ -69,16 +64,12 @@ export const ButtonStyles = StyleSheet.create({
 
 export const TextStyles = StyleSheet.create({
   RegularText: {
-    fontSize: hp(12),
-    lineHeight: hp(16),
-    color: colors.dark,
+    ...fonts[12],
     fontFamily: 'rubik-regular',
   },
 
   medium: {
-    fontSize: hp(12),
-    lineHeight: hp(16),
-    color: colors.dark,
+    ...fonts[12],
     fontFamily: 'rubik-medium',
   },
 });

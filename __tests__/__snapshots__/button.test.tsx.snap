@@ -35,12 +35,12 @@ exports[`Button Button component renders correctly 1`] = `
           "color": "#34495e",
           "fontFamily": "rubik-regular",
           "fontSize": 22,
-          "lineHeight": 29,
+          "lineHeight": 33,
         },
         Object {
           "color": "#34495e",
           "fontSize": 29,
-          "lineHeight": 38.5,
+          "lineHeight": 44,
           "textTransform": "uppercase",
         },
       ]
