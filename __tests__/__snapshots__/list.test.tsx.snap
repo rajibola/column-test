@@ -22,26 +22,30 @@ exports[`Button Button component renders correctly 1`] = `
     }
   }
 >
-  <Image
-    height={81.5}
-    source={
-      Object {
-        "uri": "content://com.android.contacts/display_photo/3",
+  <View
+    collapsable={false}
+  >
+    <Image
+      height={81.5}
+      source={
+        Object {
+          "uri": "content://com.android.contacts/display_photo/3",
+        }
       }
-    }
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#34495e",
-        "borderRadius": 81.5,
-        "height": 81.5,
-        "justifyContent": "center",
-        "marginRight": 18,
-        "width": 81.5,
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#34495e",
+          "borderRadius": 81.5,
+          "height": 81.5,
+          "justifyContent": "center",
+          "marginRight": 18,
+          "width": 81.5,
+        }
       }
-    }
-    width={81.5}
-  />
+      width={81.5}
+    />
+  </View>
   <View
     style={
       Object {
@@ -89,7 +93,7 @@ exports[`Button Button component renders correctly 1`] = `
             "color": "#34495e",
             "fontSize": 25.5,
             "lineHeight": 38.5,
-            "marginTop": 7.5,
+            "marginTop": 3.5,
             "opacity": 0.6,
           },
         ]

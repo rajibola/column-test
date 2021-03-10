@@ -11,23 +11,23 @@ export const ListItem = (props: ListItemProps) => {
   const {navigation, item} = props;
   return (
     <TouchableOpacity style={styles.contactContainer} onPress={navigation}>
-      {item.hasThumbnail ? (
-        <Image
-          source={{uri: item.thumbnailPath}}
-          width={wp(45)}
-          height={wp(45)}
-          style={styles.noAvatar}
-        />
-      ) : (
-        <SharedElement id={`item.${item.recordID}.icon`}>
+      <SharedElement id={`item.${item.recordID}.icon`}>
+        {item.hasThumbnail ? (
+          <Image
+            source={{uri: item.thumbnailPath}}
+            width={wp(45)}
+            height={wp(45)}
+            style={styles.noAvatar}
+          />
+        ) : (
           <View style={styles.noAvatar}>
             <MediumText
               style={styles.initials}
               title={getInitails(item.givenName)}
             />
           </View>
-        </SharedElement>
-      )}
+        )}
+      </SharedElement>
 
       <View style={styles.textContainer}>
         <SharedElement id={`item.${item.recordID}.title`}>

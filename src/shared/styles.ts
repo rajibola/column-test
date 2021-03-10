@@ -5,7 +5,7 @@ import {wp, hp} from './layout';
 
 export const ListStyles = StyleSheet.create({
   number: {
-    marginTop: hp(4),
+    marginTop: hp(2),
     ...fonts[14],
     opacity: 0.6,
   },
