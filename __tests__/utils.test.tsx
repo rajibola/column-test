@@ -1,16 +1,16 @@
 import React from 'react';
 import {getInitails} from '../src/utils/helpers';
 
-describe('sum function', () => {
-  it('should return default responne', () => {
+describe('get first two initials function', () => {
+  it('should return My response', () => {
     expect(getInitails('MyName')).toEqual('My');
   });
 
-  it('should return default responne', () => {
+  it('should return a letter without space', () => {
     expect(getInitails('d fault')).toEqual('d');
   });
 
-  it('should return default responne', () => {
-    expect(getInitails('')).toEqual('letters not greater than two');
+  it('should return zero', () => {
+    expect(getInitails('')).toEqual('');
   });
 });
