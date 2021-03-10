@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {Alert, FlatList, PermissionsAndroid, Text, View} from 'react-native';
+import {FlatList, PermissionsAndroid, Platform, Text, View} from 'react-native';
 import Contacts from 'react-native-contacts';
 import {ListItem} from '../shared/list';
+import {ContactListsProps} from '../types/types.d';
 import {ContactListStyles as styles} from './styles';
 
-const ContactLists = ({navigation}) => {
-  const [data, setData] = useState([]);
+const ContactLists = ({navigation}: ContactListsProps) => {
+  const [data, setData] = useState<any[]>([]);
 
-  const _renderItem = ({item}) => (
+  const _renderItem = ({item}: any) => (
     <ListItem
       item={item}
       navigation={() => navigation.navigate('Contact', {item})}
@@ -20,17 +21,18 @@ const ContactLists = ({navigation}) => {
         .then((contacts) => {
           setData(contacts);
         })
-        .catch((err) => Alert(err));
+        .catch((err) => console.log(err));
     } else if (Platform.OS === 'android') {
       PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
         title: 'Contacts',
         message: 'This app would like to view your contacts.',
+        buttonPositive: '',
       }).then(() => {
         Contacts.getAll()
           .then((contacts) => {
             setData(contacts);
           })
-          .catch((err) => Alert(err));
+          .catch((err) => console.log(err));
       });
     }
   });
@@ -40,7 +42,7 @@ const ContactLists = ({navigation}) => {
       <Text style={styles.title}>Contact Lists</Text>
 
       <FlatList
-        data={data.sort((a, b) => {
+        data={data.sort((a: {givenName: string}, b: {givenName: string}) => {
           if (a.givenName < b.givenName) {
             return -1;
           }
@@ -51,7 +53,8 @@ const ContactLists = ({navigation}) => {
         })}
         renderItem={_renderItem}
         numColumns={1}
-        keyExtractor={(item, i) => item.recordID}
+        keyExtractor={(item) => item.recordID}
+        style={styles.listContainer}
       />
     </View>
   );

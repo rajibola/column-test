@@ -1,6 +1,12 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import colors from '../constants/colors';
-import {getStatusBarHeight, hp, paddingTopiOS, wp} from '../shared/layout';
+import {
+  getStatusBarHeight,
+  hp,
+  isIphoneX,
+  paddingTopiOS,
+  wp,
+} from '../shared/layout';
 
 export const HomeStyles = StyleSheet.create({
   subtitle: {
@@ -59,14 +65,16 @@ export const ContactStyles = StyleSheet.create({
 });
 
 export const ContactListStyles = StyleSheet.create({
+  listContainer: {
+    paddingTop: hp(10),
+  },
   title: {
     fontSize: hp(20),
     backgroundColor: colors.dark,
-    paddingTop: getStatusBarHeight() + wp(5),
+    paddingTop: isIphoneX() ? getStatusBarHeight() : 0 + wp(15),
     width: '100%',
     textAlign: 'center',
     paddingBottom: hp(15),
-    marginBottom: hp(10),
     color: colors.light,
   },
   number: {

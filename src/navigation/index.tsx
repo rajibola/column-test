@@ -26,14 +26,10 @@ const SharedConfig: SharedElementsComponentConfig = (route) => {
   return [
     {
       id: `item.${item.recordID}.icon`,
-      // resize: 'stretch',
-      // align: 'center-top',
       animation: 'fade',
     },
     {
       id: `item.${item.recordID}.title`,
-      resize: 'clip',
-      // align: 'left-center',
       animation: 'move',
     },
   ];
@@ -43,7 +39,9 @@ const RootStack = createSharedElementStackNavigator<NavigationParamList>();
 
 export default function MainNavigator() {
   return (
-    <RootStack.Navigator initialRouteName="Home" screenOptions={options}>
+    <RootStack.Navigator
+      initialRouteName="Home"
+      screenOptions={{headerShown: false, gestureEnabled: false}}>
       <RootStack.Screen name="Home" component={Home} />
       <RootStack.Screen name="ContactLists" component={ContactLists} />
       <RootStack.Screen

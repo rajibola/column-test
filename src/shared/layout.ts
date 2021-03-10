@@ -83,15 +83,3 @@ export function ifIphoneX(iphoneXStyle: any, regularStyle: any) {
   }
   return regularStyle;
 }
-
-// utility to format Date
-// export const formatDate = (date: string) => {
-//   return moment(date).calendar(null, {
-//     lastDay: "[Yesterday] HH:mm",
-//     sameDay: "[Today] HH:mm",
-//     nextDay: "[Tomorrow] HH:mm",
-//     lastWeek: "[last] dddd  HH:mm",
-//     nextWeek: "dddd  HH:mm",
-//     sameElse: "MMM Do YYYY, HH:mm",
-//   });
-// };
