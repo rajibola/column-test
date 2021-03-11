@@ -7,7 +7,7 @@ import {wp} from './layout';
 import {ListStyles as styles} from './styles';
 import {MediumText, RegularText} from './text';
 
-export const ListItem = (props: ListItemProps) => {
+export const ListItem = React.memo((props: ListItemProps) => {
   const {navigation, item} = props;
   return (
     <TouchableOpacity style={styles.contactContainer} onPress={navigation}>
@@ -43,4 +43,4 @@ export const ListItem = (props: ListItemProps) => {
       </View>
     </TouchableOpacity>
   );
-};
+});
