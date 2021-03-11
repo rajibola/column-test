@@ -3,6 +3,22 @@ import colors from '../constants/colors';
 import {fonts} from '../constants/fonts';
 import {wp, hp} from './layout';
 
+export const LoadingStyles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    flex: 1,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    top: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 100,
+    backgroundColor: colors.white,
+    opacity: 0.85,
+  },
+});
+
 export const ListStyles = StyleSheet.create({
   number: {
     marginTop: hp(2),

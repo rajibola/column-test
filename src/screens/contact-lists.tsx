@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList, PermissionsAndroid, Platform, Text, View} from 'react-native';
 import Contacts from 'react-native-contacts';
+import colors from '../constants/colors';
 import {ListItem} from '../shared/list';
+import {Loading} from '../shared/loading';
 import {ContactListsProps} from '../types/types.d';
 import {ContactListStyles as styles} from './styles';
 
 const ContactLists = ({navigation}: ContactListsProps) => {
   const [data, setData] = useState<any[]>([]);
+  const [isloading, loading] = useState(true);
 
   const _renderItem = ({item}: any) => (
     <ListItem
@@ -19,9 +22,13 @@ const ContactLists = ({navigation}: ContactListsProps) => {
     if (Platform.OS === 'ios') {
       Contacts.getAll()
         .then((contacts) => {
+          loading(false);
           setData(contacts);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          loading(false);
+        });
     } else if (Platform.OS === 'android') {
       PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
         title: 'Contacts',
@@ -30,9 +37,13 @@ const ContactLists = ({navigation}: ContactListsProps) => {
       }).then(() => {
         Contacts.getAll()
           .then((contacts) => {
+            loading(false);
             setData(contacts);
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            console.log(err);
+            loading(false);
+          });
       });
     }
   });
@@ -56,6 +67,7 @@ const ContactLists = ({navigation}: ContactListsProps) => {
         keyExtractor={(item) => item.recordID}
         style={styles.listContainer}
       />
+      {isloading && <Loading color={colors.dark} />}
     </View>
   );
 };

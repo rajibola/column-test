@@ -3,7 +3,7 @@
 ## Preview
 
 <span>
-<img src="./documentation/preview.gif" alt="car-owners"  width="270" />
+<img src="./documentation/preview.gif" alt="preview"  width="270" />
 </span>
 
 <br />

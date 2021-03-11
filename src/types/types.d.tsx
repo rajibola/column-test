@@ -2,6 +2,11 @@ import {RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {TextStyle, ViewStyle} from 'react-native';
 
+export type LoadingProps = {
+  color?: string;
+  bgColor?: string;
+};
+
 export type ListItemProps = {navigation: () => void; item: ItemProps};
 
 export type HomeScreenProps = {
