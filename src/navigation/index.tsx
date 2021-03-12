@@ -19,6 +19,7 @@ const options: StackNavigationOptions = {
       },
     };
   },
+  gestureEnabled: false,
 };
 
 const SharedConfig: SharedElementsComponentConfig = (route) => {
@@ -39,9 +40,7 @@ const RootStack = createSharedElementStackNavigator<NavigationParamList>();
 
 export default function MainNavigator() {
   return (
-    <RootStack.Navigator
-      initialRouteName="Home"
-      screenOptions={{headerShown: false, gestureEnabled: false}}>
+    <RootStack.Navigator initialRouteName="Home" screenOptions={options}>
       <RootStack.Screen name="Home" component={Home} />
       <RootStack.Screen name="ContactLists" component={ContactLists} />
       <RootStack.Screen
